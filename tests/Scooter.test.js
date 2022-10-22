@@ -75,6 +75,7 @@ describe('scooter methods', () => {
   test('should log "The scooter has been repaired" to the console when the requestRepair() method is called', async () => {
     const value = jest.spyOn(console, 'log');
     await scoot.requestRepair();
+    expect(scoot.isBroken).toBe(false);
     expect(value).toHaveBeenCalledWith('The scooter has been repaired.');
   });
 
