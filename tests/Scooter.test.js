@@ -27,7 +27,9 @@ describe('scooter properties', () => {
   });
 
   test('should have property "docked" that is set to true', () => {
+    scoot.dock('Manhattan');
     expect(scoot.docked).toBe(true);
+    expect(scoot.user).toBe("");
   });
 });
 
