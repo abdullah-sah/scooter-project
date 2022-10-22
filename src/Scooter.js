@@ -23,6 +23,7 @@ class Scooter{
       // Come back here and throw an error instead of console.log()
       console.log('Docking station required!');
     } else {
+      this.station = station;
       this.docked = true;
       this.user = "";
     }
