@@ -25,7 +25,6 @@ describe('register method tests', () => {
 	// register user
 	test('should log "Too young to register!" if the user is under the age of 18', () => {
 		testUser.age = 9;
-		// value = jest.spyOn(console, 'log');
 		testApp.register(testUser);
 		expect(value).toHaveBeenCalledWith('Too young to register!');
 		testUser.age = 19;		// resetting testUser's age
